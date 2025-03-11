@@ -1567,7 +1567,52 @@ main {
 .ad-cta:hover {
     background-color: #0056b3;
 }
+/* Basic styles for the navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
 
+#icon-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 8px; /* Space between buttons */
+    margin-right: auto; /* Push the grid to the left */
+}
+
+.icon-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 10px; /* Smaller font size for labels */
+}
+
+.icon-button i {
+    font-size: 14px; /* Smaller icon size */
+    margin-bottom: 3px; /* Reduce space between icon and label */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .icon-button {
+        font-size: 8px; /* Even smaller font size for mobile */
+    }
+
+    .icon-button i {
+        font-size: 12px; /* Even smaller icon size for mobile */
+    }
+
+    #icon-container {
+        gap: 5px; /* Reduce gap further for mobile */
+    }
+}
 /* Footer */
 footer {
     text-align: center;
