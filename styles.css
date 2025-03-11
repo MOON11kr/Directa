@@ -1567,6 +1567,46 @@ main {
 .ad-cta:hover {
     background-color: #0056b3;
 }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+#hamburger {
+    display: none; /* Hide by default */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#icon-container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    #hamburger {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    #icon-container {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    #icon-container.active {
+        display: flex; /* Show navigation links when active */
+    }
+}
 /* Basic styles for the navigation bar */
 nav {
     display: flex;
@@ -1612,12 +1652,4 @@ nav {
     #icon-container {
         gap: 5px; /* Reduce gap further for mobile */
     }
-}
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-top: 1px solid #ddd;
-    margin-top: 40px;
 }
